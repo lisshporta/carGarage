@@ -4,14 +4,14 @@
 
 @foreach($listings as $listing)
 <h2>
-   <a href="/listings/{{$listing->id}}">{{$listing->name}}</a>
+   <a href="/listings/{{$listing->id}}">{{$listing->model}}</a>
 </h2>
 
 <p>
     <img class="width="400" height="80"
         src="{{asset('images/no-image.png')}}" alt="" />
         <br>
-   Production Year: {{$listing->production_year}}
+   Model : {{$listing->brand}}, {{$listing->model}}
     <br>
     Mileage : {{$listing->mileage}} km
 

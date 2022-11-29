@@ -16,7 +16,7 @@ return new class extends Migration
         Schema::create('listings', function (Blueprint $table) {
             $table->id();
             $table->string('brand');
-            $table->string('name');
+            $table->string('model');
             $table->integer('production_year');
             $table->integer('mileage');
             $table->string('fuel_type');

@@ -18,7 +18,7 @@ class ListingFactory extends Factory
     {
         return [
             'brand' => $this->faker->name(),
-            'name' => $this->faker->name(),
+            'model' => $this->faker->name(),
             'production_year' => $this->faker->randomDigit(),
             'mileage' => $this->faker->randomDigit(),
             'fuel_type' => $this->faker->word(),

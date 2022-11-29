@@ -8,7 +8,6 @@
 </head>
 <body>
     <h1>carGarage</h1>
-    
     <h2>Homepage</h2>
     {{$slot}}
 </body>
