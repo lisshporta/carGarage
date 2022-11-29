@@ -58,9 +58,8 @@ float: none;
 <div class="header">
 <a href="/" class="logo">carGarage</a>
 <div class="header-right">
-{{-- <a class="active" href="/">Home</a>
-<a href="/">Button</a>
-<a href="/">Button</a> --}}
+<a href="/">Login</a>
+<a href="/">Register</a>
 </div>
 </div>
 <div style="padding-left:20px">

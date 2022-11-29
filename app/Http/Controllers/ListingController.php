@@ -10,7 +10,7 @@ class ListingController extends Controller
     public function index()
     {
         return view('listings' , [
-        'listings' => Listing::latest()->paginate(9)
+        'listings' => Listing::latest()->simplePaginate(9)
         ]);
     }
 

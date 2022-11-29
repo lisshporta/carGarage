@@ -5,11 +5,13 @@
         .emri {
    display: grid; 
 
-   grid-template-rows: 1fr 1fr 1fr;
+   grid-template-rows: auto;
    grid-template-columns: 1fr 1fr 1fr;
-   gap: 20px;
-   margin: 40px 20px; 
+   column-gap: 20px;
+   margin: 40px 20px;
+   margin-bottom: 5px; 
    height: 100%;
+   
    
 }  
 
