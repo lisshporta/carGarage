@@ -21,6 +21,7 @@ return new class extends Migration
             $table->integer('mileage');
             $table->string('fuel_type');
             $table->string('transmission');
+            $table->string('type');
             $table->timestamps();
         });
     }

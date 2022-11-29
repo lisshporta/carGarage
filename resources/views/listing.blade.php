@@ -5,7 +5,7 @@
     <div style="border:2px solid lightgray;padding:15px;border-radius: 10px ">
 
 <h2>
-    {{$listing->model}}
+    {{$listing->brand}} , {{$listing->model}}
 </h2>
 <p>
     <img class="width="800" height="160"
@@ -22,9 +22,12 @@ Model : {{$listing->model}}
  Fuel Type : {{$listing->fuel_type}}
     <br>
  Transmission : {{$listing->transmission}}
+    <br>
+ Type : {{$listing->type}}
+
 </p>
 
-<a href="/">Back To Homepage!</a>
+<a style="color:black;text-decoration:none" href="/">Back To Homepage!</a>
     </div>
 </div>
 </x-layout>
