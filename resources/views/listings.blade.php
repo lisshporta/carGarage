@@ -27,6 +27,11 @@
 @else 
 <p>No Listings Found</p>
 @endunless
+</div>
+</div>
 
+<section>
+    {{$listings->links()}}
+</section>
 
 </x-layout>

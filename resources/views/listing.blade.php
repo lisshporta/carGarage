@@ -8,8 +8,8 @@
     {{$listing->model}}
 </h2>
 <p>
-    <img class="width="400" height="80""
-    src="{{asset('images/no-image.png')}}" alt="" />
+    <img class="width="800" height="160"
+    src="{{asset('images/no-image.png')}}" style="margin-bottom: 12px" alt="" />
     <br>
 Brand : {{$listing->brand}}
     <br>
