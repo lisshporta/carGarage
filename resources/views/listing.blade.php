@@ -1,4 +1,8 @@
+<x-header />
+
 <x-layout>
+<div class="center">
+    <div style="border:2px solid lightgray;padding:15px;border-radius: 10px ">
 
 <h2>
     {{$listing->model}}
@@ -21,5 +25,6 @@ Model : {{$listing->model}}
 </p>
 
 <a href="/">Back To Homepage!</a>
-
+    </div>
+</div>
 </x-layout>

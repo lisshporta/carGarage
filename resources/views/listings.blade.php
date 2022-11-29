@@ -1,8 +1,11 @@
+<x-header/>
 <x-layout>
 
 @unless(count($listings) == 0)    
-
+<div class="emri">
 @foreach($listings as $listing)
+<div style="border:2px solid lightgray;padding:15px;border-radius: 10px ">
+
 <h2>
    <a href="/listings/{{$listing->id}}">{{$listing->model}}</a>
 </h2>
@@ -16,10 +19,14 @@
     Mileage : {{$listing->mileage}} km
 
 </p>
+</div>
 @endforeach
+<div>
+
 
 @else 
 <p>No Listings Found</p>
 @endunless
+
 
 </x-layout>
