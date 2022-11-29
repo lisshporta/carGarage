@@ -27,7 +27,7 @@ Model : {{$listing->model}}
 
 </p>
 
-<a style="color:black;text-decoration:none" href="/">Back To Homepage!</a>
+<a style="color: black ; text-decoration:none" href="/">Back To Homepage!</a>
     </div>
 </div>
 </x-layout>

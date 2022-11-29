@@ -7,14 +7,14 @@
 <div style="border:2px solid lightgray;padding:15px;border-radius: 10px;margin-bottom:20px ">
 
 <h2>
-   <a style="color:black;text-decoration:none" href="/listings/{{$listing->id}}">{{$listing->brand}} , {{$listing->model}}</a>
+   <a style="color: black ; text-decoration:none" href="/listings/{{$listing->id}}">{{$listing->brand}} , {{$listing->model}}</a>
 </h2>
 
 <p>
     <img class="width="400" height="80"
         src="{{asset('images/no-image.png')}}" style="margin-bottom: 10px" alt="" />
         <br>
-   Produciton Year : {{$listing->production_year}}
+   Model : {{$listing->brand}}, {{$listing->model}}
     <br>
     Mileage : {{$listing->mileage}} km
 

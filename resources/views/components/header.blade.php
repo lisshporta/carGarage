@@ -32,7 +32,7 @@ font-weight: bold;
     font-size: 55px;
 }
 .header a:hover {
-background-color: #C0C0C0 ;
+background-color: #C0C0C0;
 color: black;
 }
 .header .active {
