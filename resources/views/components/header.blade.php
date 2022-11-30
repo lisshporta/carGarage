@@ -58,8 +58,23 @@ float: none;
 <div class="header">
 <a href="/" class="logo">carGarage</a>
 <div class="header-right">
-<a href="/">Login</a>
-<a href="/">Register</a>
+@guest
+<a href="/login">Login</a>
+<a href="/register">Register</a>
+@endguest
+
+    @auth
+<form method="POST" action="{{ route('logout') }}">
+    @csrf
+
+    <x-dropdown-link :href="route('logout')"
+            onclick="event.preventDefault();
+                        this.closest('form').submit();">
+        {{ __('Log Out') }} 
+    </x-dropdown-link>
+</form>
+    @endauth
+
 </div>
 </div>
 <div style="padding-left:20px">
