@@ -58,6 +58,7 @@ float: none;
 <div class="header">
 <a href="/" class="logo">carGarage</a>
 <div class="header-right">
+
 @guest
 <a href="/login">Login</a>
 <a href="/register">Register</a>

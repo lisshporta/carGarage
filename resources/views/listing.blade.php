@@ -36,8 +36,8 @@ Model: {{$listing->model}}
 @else
 <x-header />
 
-    <div style="border:2px solid lightgray;padding:15px;border-radius: 10px ">
-        <a style="color: black ; text-decoration:none" href="/login">Log In to see All Listings! </a>
+    <div style="border:2px solid lightgray;padding:15px;border-radius: 10px;text-align:center;margin-top:10px  ">
+        <a style="color: black ; text-decoration:none " href="/login">Log In to see All Listings! </a>
     </div>
 
 <x-footer />

@@ -11,5 +11,10 @@
     </style>
     
     <div class="footer">
-      <p>© 2022 carGarage. All rights reserved.</p>
+       <p>© 2022 carGarage. All rights reserved. </p> 
     </div>
+
+
+    
+
+    
