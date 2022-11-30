@@ -11,23 +11,24 @@
     <img class="width="800" height="160"
     src="{{asset('images/no-image.png')}}" style="margin-bottom: 12px" alt="" />
     <br>
-Brand : {{$listing->brand}}
+Brand: {{$listing->brand}}
     <br>
-Model : {{$listing->model}}
+Model: {{$listing->model}}
     <br>
- Produciton Year : {{$listing->production_year}}
+ Produciton Year: {{$listing->production_year}}
     <br>
- Mileage : {{$listing->mileage}} km
+ Mileage: {{$listing->mileage}} km
     <br>
- Fuel Type : {{$listing->fuel_type}}
+ Fuel Type: {{$listing->fuel_type}}
     <br>
- Transmission : {{$listing->transmission}}
+ Transmission: {{$listing->transmission}}
     <br>
- Type : {{$listing->type}}
+ Type: {{$listing->type}}
 
 </p>
 
 <a style="color: black ; text-decoration:none" href="/">Back To Homepage!</a>
     </div>
 </div>
+<x-footer />
 </x-layout>

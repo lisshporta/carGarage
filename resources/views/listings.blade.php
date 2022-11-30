@@ -14,9 +14,9 @@
     <img class="width="400" height="80"
         src="{{asset('images/no-image.png')}}" style="margin-bottom: 10px" alt="" />
         <br>
-   Model : {{$listing->brand}}, {{$listing->model}}
+   Production Year: {{$listing->production_year}}
     <br>
-    Mileage : {{$listing->mileage}} km
+    Mileage: {{$listing->mileage}} km
 
 </p>
 </div>
@@ -29,8 +29,10 @@
 @endunless
 </div>
 </div>
-<section style="text-align:left;margin-left:20px; margin-bottom:10px">
+<section style="text-align:left;margin-left:20px; margin-bottom:75px">
     {{$listings->links()}}
 </section>
+
+<x-footer />
 
 </x-layout>
