@@ -22,6 +22,8 @@ return new class extends Migration
             $table->string('fuel_type');
             $table->string('transmission');
             $table->string('type');
+            $table->string('description');
+            $table->string('price');
             $table->timestamps();
         });
     }

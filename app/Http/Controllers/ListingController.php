@@ -6,13 +6,13 @@ use App\Models\Listing;
 use Illuminate\Http\Request;
 use Illuminate\Validation\Rule;
 
+
 class ListingController extends Controller
 {
     public function index()
     {
         return view('listings' , [
-        'listings' => Listing::latest()
-        ->orderBy('created_at', 'DESC')
+        'listings' => Listing::latest('id')
         ->simplePaginate(9)
         ]);
     }

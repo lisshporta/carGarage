@@ -23,7 +23,9 @@ class ListingFactory extends Factory
             'mileage' => $this->faker->randomDigit(),
             'fuel_type' => $this->faker->word(),
             'transmission' => $this->faker->word(),
-            'type' => $this->faker->word()
+            'type' => $this->faker->word(),
+            'description' => $this->faker->sentence(),
+            'price' => $this->faker->randomDigit()
         ];
     }
 }
