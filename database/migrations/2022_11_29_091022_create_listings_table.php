@@ -18,7 +18,7 @@ return new class extends Migration
             $table->string('brand');
             $table->string('model');
             $table->integer('production_year');
-            $table->integer('mileage');
+            $table->string('mileage');
             $table->string('fuel_type');
             $table->string('transmission');
             $table->string('type');

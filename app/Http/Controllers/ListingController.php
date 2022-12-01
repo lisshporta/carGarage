@@ -26,7 +26,7 @@ class ListingController extends Controller
 
     public function create()
     {
-        // Show form to create listing
+        return view('listings.create');
     }
 
     public function store(Request $request)
