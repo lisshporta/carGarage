@@ -31,7 +31,21 @@ class ListingController extends Controller
 
     public function store(Request $request)
     {
-        // Store listing data to create listing
+        $formFields = $request->validate([
+            'brand' => 'required',
+            'model' => 'required',
+            'production_year' => 'required',
+            'mileage' => 'required',
+            'fuel_type' => 'required',
+            'transmission' => 'required',
+            'type' => 'required',
+            'description' => 'required',
+            'price' => 'required',
+        ]);
+
+        Listing::create($formFields);
+
+        return redirect('/')->with(['success' => 'Car Listed for Sale!']);
     }
 
     public function edit(Listing $listing)
