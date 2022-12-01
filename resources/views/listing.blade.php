@@ -25,6 +25,11 @@ Model: {{$listing->model}}
  Transmission: {{$listing->transmission}}
     <br>
  Type: {{$listing->type}}
+    <br>
+ Description: {{$listing->description}}  
+ {{-- <textarea> {{$listing->description}}  </textarea> --}}
+    <br>
+ Price : {{$listing->price}} € 
 
 </p>
 
@@ -37,7 +42,7 @@ Model: {{$listing->model}}
 <x-header />
 
     <div style="border:2px solid lightgray;padding:15px;border-radius: 10px;text-align:center;margin-top:10px  ">
-        <a style="color: black ; text-decoration:none " href="/login">Log In to see All Listings! </a>
+        <a style="color: black ; text-decoration:none " href="/login">Log In to see Detailed Listings! </a>
     </div>
 
 <x-footer />
