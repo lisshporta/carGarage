@@ -12,6 +12,7 @@
 @csrf
 <div  class="mb-6">
   Brand: <select name="brand" id="brand">
+    <option disabled selected hidden>Choose..</option>
         <option>Audi</option>
         <option>BMW</option>
         <option>Mercedes</option>
@@ -29,6 +30,7 @@
         type="text"
         class="border border-gray-200 rounded p-2 w-full"
         name="model"
+        placeholder="Type car model"
         value="{{old('model')}}"
 
     />
@@ -45,6 +47,7 @@
         type="number"
         class="border border-gray-200 rounded p-2 w-full"
         name="production_year"
+        placeholder="eg: 2013"
         value="{{old('production_year')}}"
 
     />

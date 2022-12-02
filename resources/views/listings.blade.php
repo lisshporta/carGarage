@@ -13,7 +13,7 @@
 @auth
 
 <div style="text-align:center;margin-top:10px">
-Welcome back {{auth()->user()->name}}
+Welcome back <a style="color: black ; text-decoration:none" href="/profile">{{auth()->user()->name}}</a>
 </div>
 @endauth
 
