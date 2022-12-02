@@ -5,7 +5,7 @@
 - Login to see detailed listings
 - Search desired car (desired mileage , brand , type , etc.)
 - Profile Section : update name , email , password and delete account
-                    see your listing/s where u can edit or delete them 
+- see your listing/s where u can edit or delete them 
 
 <hr>
 
