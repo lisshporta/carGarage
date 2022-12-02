@@ -1,4 +1,4 @@
-@auth
+
 <x-header />
 
 <x-layout>
@@ -41,12 +41,3 @@ Model: {{$listing->model}}
 </div>
 <x-footer />
 </x-layout>   
-@else
-<x-header />
-
-    <div style="border:2px solid lightgray;padding:15px;border-radius: 10px;text-align:center;margin-top:10px  ">
-        <a style="color: black ; text-decoration:none " href="/login">Log In to see Detailed Listings! </a>
-    </div>
-
-<x-footer />
-@endauth

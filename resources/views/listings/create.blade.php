@@ -1,4 +1,4 @@
-@auth
+
 <x-layout>
 <x-header />
 
@@ -159,14 +159,3 @@
 
 <x-footer />
 </x-layout>
-@else 
-
-<x-header />
-
-    <div style="border:2px solid lightgray;padding:15px;border-radius: 10px;text-align:center;margin-top:10px  ">
-        <a style="color: black ; text-decoration:none " href="/login">Log In to list a car for sale! </a>
-    </div>
-
-<x-footer />
-
-@endauth

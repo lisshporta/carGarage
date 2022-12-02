@@ -19,7 +19,7 @@ use App\Http\Controllers\ListingController;
 Route::get('/', [ListingController::class, 'index']);
 
 // Show Create Form
-Route::get('/listings/create', [ListingController::class, 'create']);
+Route::get('/listings/create', [ListingController::class, 'create'])->middleware('auth');
 
 // Store Listing Data
 Route::post('/listings',[ListingController::class, 'store']);
@@ -31,7 +31,7 @@ Route::get('/listings/{listing}/edit', [ListingController::class, 'edit'])->midd
 Route::put('/listings/{listing}', [ListingController::class, 'update'])->middleware('auth');
 
 // Single Listing
-Route::get('/listings/{listing}',[ListingController::class, 'show']);
+Route::get('/listings/{listing}',[ListingController::class, 'show'])->middleware('auth');
 
 Route::get('/dashboard', function () {
     return view('dashboard');
