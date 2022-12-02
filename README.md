@@ -3,8 +3,9 @@
 - Car Marketplace , buy and sell used cars 
 - Login to list your car for sale 
 - Login to see detailed listings
-- Search desired car (desired mileage , brand , type)
-
+- Search desired car (desired mileage , brand , type , etc.)
+- Profile Section : update name , email , password and delete account
+                    see your listing/s where u can edit or delete them 
 
 <hr>
 
@@ -74,4 +75,4 @@ If you discover a security vulnerability within Laravel, please send an e-mail t
 ## License
 
 The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
-# carGarage
+
