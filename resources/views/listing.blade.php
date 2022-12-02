@@ -32,9 +32,11 @@ Model: {{$listing->model}}
  Price : {{$listing->price}} € 
 
 </p>
-<a style="color:black; text-decoration:none" href="/listings/{{$listing->id}}/edit">Edit Listing</a>
+<div style="display:flex; justify-content:space-between">
+<a style="color:black; text-decoration:none" href="/listings/{{$listing->id}}/edit"><button>Edit Listing</button></a>
 <br>
-<a style="color: black ; text-decoration:none" href="/">Back To Homepage!</a>
+<a style="color: black ; text-decoration:none" href="/"><button>Back To Homepage!</button></a>
+</div>
     </div>
 </div>
 <x-footer />

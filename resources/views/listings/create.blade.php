@@ -1,3 +1,4 @@
+@auth
 <x-layout>
 <x-header />
 
@@ -57,7 +58,7 @@
         >Mileage: </label
     >
     <select name="mileage" id="mileage">
-        <option> 0 - 50.000</option> km
+        <option> 0 - 50.000</option> 
         <option> 50.000 - 100.000</option> 
         <option> 100.000 - 150.000</option> 
         <option> 150.000 - 200.000</option> 
@@ -158,3 +159,14 @@
 
 <x-footer />
 </x-layout>
+@else 
+
+<x-header />
+
+    <div style="border:2px solid lightgray;padding:15px;border-radius: 10px;text-align:center;margin-top:10px  ">
+        <a style="color: black ; text-decoration:none " href="/login">Log In to list a car for sale! </a>
+    </div>
+
+<x-footer />
+
+@endauth

@@ -12,7 +12,7 @@
     
     <div style="display:flex; justify-content:space-between" class="footer">
        <p style="margin-left:10px">© 2022 carGarage. All rights reserved. </p> 
-       @auth <a style="color: black ; text-decoration:none;margin-top:15px;margin-right:10px" href="/listings/create">Sell your Car</a> @endauth
+       <a style="color: black ; text-decoration:none;margin-top:15px;margin-right:10px" href="/listings/create">Sell your Car</a>
     </div>
 
     

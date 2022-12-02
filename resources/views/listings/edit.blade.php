@@ -68,7 +68,7 @@
         >
         <select name="mileage" id="mileage">
             <option>{{$listing->mileage}}</option>
-            <option> 0 - 50.000</option> km
+            <option> 0 - 50.000</option> 
             <option> 50.000 - 100.000</option> 
             <option> 100.000 - 150.000</option> 
             <option> 150.000 - 200.000</option> 
@@ -164,7 +164,7 @@
     @enderror
     </div>
     
-    <button style="margin-top:10px" type="submit"> Edit Listing </button>
+    <button style="margin-top:10px" type="submit"> Update Listing </button>
     </form>
     
     </div>
