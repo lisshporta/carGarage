@@ -1,3 +1,4 @@
+<x-layout>
 <x-header />
 
 <div style="border:2px solid lightgray;padding:15px;border-radius:10px;margin-top:95px;
@@ -10,13 +11,12 @@
 @csrf
 <div  class="mb-6">
   Brand: <select name="brand" id="brand">
-    @foreach (\App\Models\Listing::all() as $listing)
-
-    <option 
-            value="{{$listing->brand}}"
-            {{ old('brand') == $listing->brand ? 'selected' : '' }}
-            >{{ucwords($listing->brand)}} </option>
-    @endforeach
+        <option>Audi</option>
+        <option>BMW</option>
+        <option>Mercedes</option>
+        <option>Toyota</option>
+        <option>Volkswagen</option>
+        <option>Seat</option>
    </select>
 </div>
 
@@ -44,7 +44,6 @@
         type="number"
         class="border border-gray-200 rounded p-2 w-full"
         name="production_year"
-        placeholder="Numbers Only"  
         value="{{old('production_year')}}"
 
     />
@@ -123,7 +122,13 @@
     <label for="description" class="inline-block text-lg mb-2"
         >Description: </label
     >
-    <textarea style="margin-top:10px" name="description" id="description" cols="15" rows="7"></textarea>
+    <textarea style="margin-top:10px" 
+            name="description" 
+            id="description" 
+            cols="15" 
+            rows="7" 
+            placeholder="-Describe ur car with a few sentences "
+        ></textarea>
 
     @error('description')
     <p class="text-red-500 text-xs mt-1">{{$message}}</p>
@@ -152,3 +157,4 @@
 </div>
 
 <x-footer />
+</x-layout>

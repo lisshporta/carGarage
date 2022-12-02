@@ -32,7 +32,8 @@ Model: {{$listing->model}}
  Price : {{$listing->price}} € 
 
 </p>
-
+<a style="color:black; text-decoration:none" href="/listings/{{$listing->id}}/edit">Edit Listing</a>
+<br>
 <a style="color: black ; text-decoration:none" href="/">Back To Homepage!</a>
     </div>
 </div>

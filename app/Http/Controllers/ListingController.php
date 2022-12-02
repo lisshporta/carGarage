@@ -50,12 +50,26 @@ class ListingController extends Controller
 
     public function edit(Listing $listing)
     {
-        // Show form to edit listing
+        return view('listings.edit', ['listing' => $listing]);
     }
 
     public function update(Request $request, Listing $listing)
     {
-        // Update the listing data
+        $formFields = $request->validate([
+            'brand' => 'required',
+            'model' => 'required',
+            'production_year' => 'required|max:4|min:4',
+            'mileage' => 'required',
+            'fuel_type' => 'required',
+            'transmission' => 'required',
+            'type' => 'required',
+            'description' => 'required',
+            'price' => 'required',
+        ]);
+
+        $listing->update($formFields);
+
+        return back()->with(['success' => 'Listing Updated!']);
     }
 
     public function destroy(Listing $listing)
@@ -65,6 +79,6 @@ class ListingController extends Controller
 
     public function manage()
     {
-        // Manage listing
+        // Show Form to Manage listing
     }
 }
