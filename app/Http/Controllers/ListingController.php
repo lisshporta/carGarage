@@ -40,8 +40,11 @@ class ListingController extends Controller
             'transmission' => 'required',
             'type' => 'required',
             'description' => 'required',
-            'price' => 'required',
+            'price' => 'required|max:7',
         ]);
+
+        // user_id gets the value from the id of the user logged in 
+        $formFields['user_id'] = auth()->id();
 
         Listing::create($formFields);
 
