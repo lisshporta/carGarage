@@ -9,7 +9,7 @@
 </div>
     @endif
     
-    <div style="border:2px solid lightgray;padding:15px;border-radius:10px;margin-top:95px;
+    <div style="border:2px solid black;padding:15px;border-radius:10px;margin-top:95px;
                 display:grid;width:35%;justify-content:center;margin-left:32%;">
     <h2 class="text-2xl font-bold uppercase mb-1">
         Edit Listing : 

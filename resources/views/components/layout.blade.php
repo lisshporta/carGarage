@@ -2,9 +2,11 @@
 <html lang="en">
 <head>
     <style>
+        body {
+            background-color: #f0f0f0;
+            }
         .emri {
    display: grid; 
-
    grid-template-rows: auto;
    grid-template-columns: 1fr 1fr 1fr;
    column-gap: 20px;

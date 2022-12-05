@@ -3,7 +3,7 @@
 
 <x-layout>
 <div class="center">
-    <div style="border:2px solid lightgray;padding:15px;border-radius: 10px ">
+    <div style="border:2px solid black;padding:15px;border-radius: 10px ">
 
 <h2>
     {{$listing->brand}} , {{$listing->model}}

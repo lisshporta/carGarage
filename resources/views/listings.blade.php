@@ -21,7 +21,7 @@ Welcome back <a style="color: black ; text-decoration:none" href="/profile">{{au
 @unless(count($listings) == 0)    
 <div class="emri">
 @foreach($listings as $listing)
-<div style="border:2px solid lightgray;padding:15px;border-radius: 10px;margin-bottom:20px ">
+<div style="border:2px solid black;padding:15px;border-radius: 10px;margin-bottom:20px ">
 
 <h2>
    <a style="color: black ; text-decoration:none" href="/listings/{{$listing->id}}">{{$listing->brand}} , {{$listing->model}}</a>
@@ -36,10 +36,12 @@ Welcome back <a style="color: black ; text-decoration:none" href="/profile">{{au
     Mileage: {{$listing->mileage}} km
 
 </p>
+
 </div>
 @endforeach
-<div>
 
+
+</div>
 
 @else 
 <p>No Listings Found</p>
