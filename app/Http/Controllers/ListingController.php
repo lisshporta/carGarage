@@ -58,6 +58,10 @@ class ListingController extends Controller
 
     public function update(Request $request, Listing $listing)
     {
+        if($listing->user_id != auth()->id()) {
+            abort('403' , 'Unauthorized Action');
+        }
+
         $formFields = $request->validate([
             'brand' => 'required',
             'model' => 'required',
@@ -78,6 +82,8 @@ class ListingController extends Controller
     public function destroy(Listing $listing)
     {
         // Delete Listing
+        // if($listing->user_id != auth()->id()) {
+        // abort('403' , 'Unauthorized Action');
     }
 
     public function manage()
