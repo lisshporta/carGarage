@@ -30,6 +30,12 @@ Route::get('/listings/{listing}/edit', [ListingController::class, 'edit'])->midd
 // Edit Listing
 Route::put('/listings/{listing}', [ListingController::class, 'update'])->middleware('auth');
 
+// Delete Listing
+Route::delete('/listings/{listing}', [ListingController::class, 'destroy']);
+
+// Manage Listings
+Route::get('/listings/manage' , [ListingController::class, 'manage'])->middleware('auth');
+
 // Single Listing
 Route::get('/listings/{listing}',[ListingController::class, 'show'])->middleware('auth');
 

@@ -71,7 +71,7 @@ class ListingController extends Controller
             'transmission' => 'required',
             'type' => 'required',
             'description' => 'required',
-            'price' => 'required',
+            'price' => 'required|max:7',
         ]);
 
         $listing->update($formFields);
@@ -81,13 +81,15 @@ class ListingController extends Controller
 
     public function destroy(Listing $listing)
     {
-        // Delete Listing
-        // if($listing->user_id != auth()->id()) {
-        // abort('403' , 'Unauthorized Action');
-    }
+    if ($listing->user_id != auth()->id()) {
+        abort('403', 'Unauthorized Action');
+        }
 
+        $listing->delete();
+        return redirect('/')->with(['success' => 'Listing Deleted!']);
+    }
     public function manage()
     {
-        // Show Form to Manage listing
+        return view('listings.manage' , ['listings' => request()->user()->listings()->get()]);
     }
 }

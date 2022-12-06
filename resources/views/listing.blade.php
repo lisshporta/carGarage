@@ -1,9 +1,8 @@
-
 <x-header />
-
 <x-layout>
+
 <div class="center">
-    <div style="border:2px solid black;padding:15px;border-radius: 10px ">
+    <div style="border:2px solid black;padding:15px;border-radius:10px">
 
 <h2>
     {{$listing->brand}} , {{$listing->model}}
@@ -32,12 +31,16 @@ Model: {{$listing->model}}
  Price : {{$listing->price}} € 
 
 </p>
-<div style="display:flex; justify-content:space-between">
-<a style="color:black; text-decoration:none" href="/listings/{{$listing->id}}/edit"><button>Edit Listing</button></a>
-<br>
-<a style="color: black ; text-decoration:none" href="/"><button>Back To Homepage!</button></a>
-</div>
+      <div style="display:flex; justify-content:space-between">
+   <br>
+      <a style="color: black ; text-decoration:none" href="/"><button>Back To Homepage!</button></a>
+         </div>
     </div>
 </div>
-<x-footer />
-</x-layout>   
+
+      <div class="center" style="display:flex; margin:auto;width:27.5%; margin-top:10px; border:2px solid black;border-radius:10px">
+            <p> <a href="#">Click here to contact seller</a> </p>
+      </div>
+
+            <x-footer />
+      </x-layout>   

@@ -57,6 +57,7 @@ float: none;
 <body>
 <div class="header">
 <a href="/" class="logo">carGarage</a>
+
 <div class="header-right">
 
 @guest
