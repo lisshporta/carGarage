@@ -2,13 +2,8 @@
 <x-layout>
 
 
-@if (session('success'))
-<div style="text-align:center;margin-top:30px" x-data="{show: true}" x-init="setTimeout(() => show = false, 2500)" x-show="show">
-    <div class="alert alert-success">
-        {{ session('success') }}
-    </div>
-</div>
-@endif
+    <x-flash />
+
 @auth
 
 <div style="text-align:center;margin-top:10px">

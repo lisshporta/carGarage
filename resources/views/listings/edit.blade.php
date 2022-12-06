@@ -1,13 +1,7 @@
 <x-layout>
     <x-header />
 
-    @if (session('success'))
-<div style="text-align:center;margin-top:10px" x-data="{show: true}" x-init="setTimeout(() => show = false, 2500)" x-show="show">
-    <div class="alert alert-success">
-        {{ session('success') }}
-    </div>
-</div>
-    @endif
+        <x-flash />
     
     <div style="border:2px solid black;padding:15px;border-radius:10px;margin-top:95px;
                 display:grid;width:35%;justify-content:center;margin-left:32%;">
