@@ -48,7 +48,7 @@ class ListingController extends Controller
 
         Listing::create($formFields);
 
-        return redirect('/')->with(['success' => 'Car Listed for Sale!']);
+        return redirect('/listings/manage')->with(['success' => 'Car Listed for Sale!']);
     }
 
     public function edit(Listing $listing)
@@ -76,7 +76,7 @@ class ListingController extends Controller
 
         $listing->update($formFields);
 
-        return back()->with(['success' => 'Listing Updated!']);
+        return redirect('/listings/manage')->with(['success' => 'Listing Updated!']);
     }
 
     public function destroy(Listing $listing)
@@ -86,7 +86,7 @@ class ListingController extends Controller
         }
 
         $listing->delete();
-        return redirect('/')->with(['success' => 'Listing Deleted!']);
+        return redirect('/listings/manage')->with(['success' => 'Listing Deleted!']);
     }
     public function manage()
     {

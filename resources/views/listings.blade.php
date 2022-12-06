@@ -1,10 +1,9 @@
 <x-header/>
 <x-layout>
-<script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@2.8.2/dist/alpine.min.js"></script>
 
 
 @if (session('success'))
-<div style="text-align:center;margin-top:10px" x-data="{show: true}" x-init="setTimeout(() => show = false, 2500)" x-show="show">
+<div style="text-align:center;margin-top:30px" x-data="{show: true}" x-init="setTimeout(() => show = false, 2500)" x-show="show">
     <div class="alert alert-success">
         {{ session('success') }}
     </div>
