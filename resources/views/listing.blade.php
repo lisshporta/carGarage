@@ -4,7 +4,7 @@
 <div class="center">
     <div style="border:2px solid black;padding:15px;border-radius:10px">
 
-<h2>
+<h2> 
     {{$listing->brand}} , {{$listing->model}}
 </h2>
 <p>
@@ -29,6 +29,8 @@ Model: {{$listing->model}}
  {{-- <textarea> {{$listing->description}}  </textarea> --}}
     <br>
  Price : {{$listing->price}} € 
+    <br>
+ Seller: {{$listing->user->name}}
 
 </p>
       <div style="display:flex; justify-content:space-between">

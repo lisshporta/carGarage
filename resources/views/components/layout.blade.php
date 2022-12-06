@@ -20,7 +20,7 @@
 .center {
   display: flex;
   justify-content: center;
-  margin-top: 100px;
+  margin-top: 70px;
 }
     </style>
     <meta charset="UTF-8">

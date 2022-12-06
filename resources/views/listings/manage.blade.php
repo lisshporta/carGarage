@@ -1,14 +1,20 @@
 <x-header />
 <x-layout>
 
-    <table>
-        <tbody>
+    @if(count($listings) == 1)    
+    <h2 class="center">Manage your Listing</h2>
+    @else
+    <h2 class="center">Manage your Listings</h2>
+    @endif
+
+    <table class="center">
+        <tbody style="border:2px solid black;padding:5px;border-radius:10px">
             @unless($listings->isEmpty())
             @foreach($listings as $listing)
             <tr>
                 <td>
-                    <a href="/listings/{{$listing->id}}">
-                        {{$listing->brand}}
+                    <a style="color: black"  href="/listings/{{$listing->id}}">
+                        {{$listing->brand}} , {{$listing->model}}
                     </a>
                 </td>
                 <td>
@@ -19,7 +25,7 @@
                 <form method="POST" action="/listings/{{$listing->id}}">
                     @csrf 
                     @method('DELETE')
-                    <button> Delete</button>
+                    <button onclick="return confirm('Are you sure?')"> Delete</button>
                     </form>
                 </td>
             </tr>
