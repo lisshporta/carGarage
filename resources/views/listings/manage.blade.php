@@ -35,7 +35,7 @@
             @else
             <tr>
                 <td>
-                    <p>No Listings Found</p>
+                    <p>No Listings Found , <a href="/listings/create">Create one !</a> </p>
                 </td>
             </tr>
             @endunless

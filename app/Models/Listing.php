@@ -14,4 +14,12 @@ class Listing extends Model
     {
        return $this->belongsTo(User::class, 'user_id');
     }
+
+    public function scopeFilter($query, array $filters)
+    {
+        if($filters['search'] ?? false) {
+            $query->where('brand' , 'like' , '%' . request('search') . '%')
+            ->orWhere('model' , 'like' , '%' . request('search') . '%');
+        }
+    }
 }

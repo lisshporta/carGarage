@@ -1,16 +1,17 @@
 <x-header/>
 <x-layout>
 
-
     <x-flash />
+    <div style="display:flex;justify-content:space-between">
+<x-search />
 
-@auth
-
-<div style="text-align:center;margin-top:10px">
-Welcome back <a style="color: black ; text-decoration:none" href="/profile">{{auth()->user()->name}}</a>
-</div>
+    @auth
+<p style="text-align:center;margin-top:10px;margin-right:45%">
+Welcome back <a style="color: black ; text-decoration:none;" href="/profile">{{auth()->user()->name}}</a>
+</p>
 @endauth
 
+    </div>
 
 @unless(count($listings) == 0)    
 <div class="emri">

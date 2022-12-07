@@ -13,7 +13,8 @@ class ListingController extends Controller
     {
         return view('listings' , [
         'listings' => Listing::latest('id')
-        ->simplePaginate(9)
+        ->filter(request(['search']))->simplePaginate(9)
+
         ]);
     }
 
