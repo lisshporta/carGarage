@@ -40,9 +40,9 @@ Model: {{$listing->model}}
     </div>
 </div>
 
-      <div class="center" style="display:flex; margin:auto;width:27.5%; margin-top:10px; border:2px solid black;border-radius:10px">
+      {{-- <div class="center" style="display:flex; margin:auto;width:27.5%; margin-top:10px; border:2px solid black;border-radius:10px">
             <p> <a href="#">Click here to contact seller</a> </p>
-      </div>
+      </div> --}}
 
             <x-footer />
       </x-layout>   
