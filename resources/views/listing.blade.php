@@ -10,7 +10,7 @@
 </h2>
 <p>
     <img class="width="800" height="160"
-    src="{{asset('images/no-image.png')}}" style="margin-bottom: 12px" alt="" />
+    src="{{$listing->images ? asset('storage/' . $listing->images) : asset('/images/no-image.png')}}" style="margin-bottom: 12px" alt="" />
     <br>
 Brand: {{$listing->brand}}
     <br>

@@ -53,6 +53,10 @@ class ListingController extends Controller
         // user_id gets the value from the id of the user logged in 
         $formFields['user_id'] = auth()->id();
 
+        if($request->hasFile('images')) {
+            $formFields['images'] = $request->file('images')->store('images', 'public');
+        }
+
         Listing::create($formFields);
 
         return redirect('/listings/manage')->with(['success' => 'Car Listed for Sale!']);

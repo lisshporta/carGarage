@@ -24,7 +24,7 @@ Welcome back <a style="color: black ; text-decoration:none;" href="/profile">{{a
 
 <p>
     <img class="width="400" height="80"
-        src="{{asset('images/no-image.png')}}" style="margin-bottom: 10px" alt="" />
+        src="{{$listing->images ? asset('storage/' . $listing->images) : asset('/images/no-image.png')}}" style="margin-bottom: 10px" alt="" />
         <br>
    Production Year: {{$listing->production_year}}
     <br>
