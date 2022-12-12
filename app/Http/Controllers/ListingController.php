@@ -5,24 +5,28 @@ namespace App\Http\Controllers;
 use App\Models\Listing;
 use Illuminate\Http\Request;
 use Illuminate\Validation\Rule;
+use Illuminate\Support\Facades\DB;
 
 
 class ListingController extends Controller
 {
     public function index()
     {
+        
         return view('listings' , [
-        'listings' => Listing::latest()
+        'listings' => Listing::orderBy('views', 'desc')
         ->filter(request(['search']))
         ->simplePaginate(9)
-
         ]);
+
+
     }
 
     public function show(Listing $listing)
     {
+        Listing::find($listing->id)->increment('views');
         return view('listing', [
-            'listing' => $listing
+        'listing' => $listing
         ]);
     }
 
@@ -44,6 +48,7 @@ class ListingController extends Controller
             'description' => 'required',
             'price' => 'required|max:7',
         ]);
+
 
         // user_id gets the value from the id of the user logged in 
         $formFields['user_id'] = auth()->id();

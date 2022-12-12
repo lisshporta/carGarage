@@ -25,7 +25,8 @@ class ListingFactory extends Factory
             'transmission' => $this->faker->word(),
             'type' => $this->faker->word(),
             'description' => $this->faker->sentence(),
-            'price' => $this->faker->randomDigit()
+            'price' => $this->faker->randomDigit(),
+            'views' => '0'
         ];
     }
 }
