@@ -28,7 +28,7 @@
             <!-- Phone -->
             <div class="mt-4">
                 <x-input-label for="phone" :value="__('Phone')" />
-                <x-text-input id="phone" class="block mt-1 w-full" type="number" placeholder="Comming Soon..." name="phone" :value="old('phone')"  /> <!-- required autofocus after " to make the field required-->
+                <x-text-input id="phone" class="block mt-1 w-full" type="number" placeholder="Optional" name="phone" :value="old('phone')"  /> <!-- required autofocus after " to make the field required-->
                 <x-input-error :messages="$errors->get('phone')" class="mt-2" />
             </div>
 
