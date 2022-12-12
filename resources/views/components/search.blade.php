@@ -8,6 +8,7 @@
         />
 
             <button type="submit">
+                <i class="fa fa-search"></i>
                 Search
             </button>
 

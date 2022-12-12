@@ -56,13 +56,13 @@ float: none;
 </head>
 <body>
 <div class="header">
-<a href="/" class="logo">carGarage</a>
+<a href="/" class="logo"> carGarage <i class="fa fa-automobile" style="font-size:20px"></i> </a> 
 
 <div class="header-right">
 
 @guest
-<a href="/login">Login</a>
-<a href="/register">Register</a>
+<a href="/login">Login <i class="fa fa-sign-in" aria-hidden="true"></i> </a>
+<a href="/register">Register <i class="fa fa-user" aria-hidden="true"></i> </a>
 @endguest
 
     @auth
@@ -72,7 +72,7 @@ float: none;
     <x-dropdown-link :href="route('logout')"
             onclick="event.preventDefault();
                         this.closest('form').submit();">
-        {{ __('Log Out') }} 
+        {{ __('Log Out ') }} <i class="fa fa-sign-out"></i>
     </x-dropdown-link>
 </form>
     @endauth

@@ -21,13 +21,14 @@
                 </td>
                 <td>
                     <a href="/listings/{{$listing->id}}/edit">
-                      <button>Edit</button> </a>
+                      <button>Edit <i class="fa fa-edit"></i> </button> </a>
                 </td>
                 <td>
                 <form method="POST" action="/listings/{{$listing->id}}">
                     @csrf 
                     @method('DELETE')
-                    <button onclick="return confirm('Are you sure?')"> Delete</button>
+                    <button onclick="return confirm('Are you sure?')">Delete 
+                        <i class="fa fa-trash"></i> </button>
                     </form>
                 </td>
             </tr>

@@ -4,6 +4,7 @@
 <div class="center">
     <div style="border:2px solid black;padding:15px;border-radius:10px">
 
+      <p>Views: {{$listing->views}} <i class='fa fa-eye'></i></p>
 <h2> 
     {{$listing->brand}} , {{$listing->model}}
 </h2>
@@ -35,7 +36,7 @@ Model: {{$listing->model}}
 </p>
       <div style="display:flex; justify-content:space-between">
    <br>
-      <a style="color: black ; text-decoration:none" href="/"><button>Back To Homepage!</button></a>
+      <a style="color: black ; text-decoration:none" href="/"><button> <i class="fa fa-chevron-left"></i> Back To Homepage!</button></a>
          </div>
     </div>
 </div>

@@ -5,7 +5,6 @@ namespace App\Http\Controllers;
 use App\Models\Listing;
 use Illuminate\Http\Request;
 use Illuminate\Validation\Rule;
-use Illuminate\Support\Facades\DB;
 
 
 class ListingController extends Controller
@@ -14,7 +13,8 @@ class ListingController extends Controller
     {
         
         return view('listings' , [
-        'listings' => Listing::orderBy('views', 'desc')
+        // 'listings' => Listing::orderBy('views', 'desc')
+        'listings' => Listing::latest()
         ->filter(request(['search']))
         ->simplePaginate(9)
         ]);
