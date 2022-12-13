@@ -3,7 +3,7 @@
         <input
             type="text"
             name="search"
-            style="margin-top:10px;margin-left:10px"
+            style="margin-top:16px;margin-left:10px"
             placeholder="Search Desired Car..."
         />
 

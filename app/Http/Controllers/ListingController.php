@@ -83,6 +83,10 @@ class ListingController extends Controller
             'price' => 'required|max:7',
         ]);
 
+        if($request->hasFile('images')) {
+            $formFields['images'] = $request->file('images')->store('images', 'public');
+        }
+        
         $listing->update($formFields);
 
         return redirect('/listings/manage')->with(['success' => 'Listing Updated!']);

@@ -7,7 +7,7 @@
 @auth
 <p>Welcome back <a style="color: black ; text-decoration:none;" href="/profile">{{auth()->user()->name}}</a> </p>
 @endauth
-<p>Total number of listings: {{$listingCount}}</p>
+<p style="margin-right:10px">Total number of listings: {{$listingCount}}</p>
     </div>
    
 
