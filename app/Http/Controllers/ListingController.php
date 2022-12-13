@@ -10,16 +10,14 @@ use Illuminate\Validation\Rule;
 class ListingController extends Controller
 {
     public function index()
-    {
-        
+    {   
+        $listingCount = Listing::count();
         return view('listings' , [
         // 'listings' => Listing::orderBy('views', 'desc')
         'listings' => Listing::latest()
         ->filter(request(['search']))
         ->simplePaginate(9)
-        ]);
-
-
+        ])->with('listingCount', $listingCount);
     }
 
     public function show(Listing $listing)

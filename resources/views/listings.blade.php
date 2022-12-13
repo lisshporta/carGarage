@@ -3,15 +3,13 @@
 
     <x-flash />
     <div style="display:flex;justify-content:space-between">
-<x-search />
-
-    @auth
-<p style="text-align:center;margin-top:10px;margin-right:45%">
-Welcome back <a style="color: black ; text-decoration:none;" href="/profile">{{auth()->user()->name}}</a>
-</p>
+<x-search /> 
+@auth
+<p>Welcome back <a style="color: black ; text-decoration:none;" href="/profile">{{auth()->user()->name}}</a> </p>
 @endauth
-
+<p>Total number of listings: {{$listingCount}}</p>
     </div>
+   
 
 @unless(count($listings) == 0)    
 <div class="emri">
