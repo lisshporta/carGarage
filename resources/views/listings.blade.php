@@ -22,7 +22,7 @@
 
 <p>
     <img class="width="400" height="80"
-        src="{{$listing->images ? asset('storage/' . $listing->images) : asset('/images/no-image.png')}}" style="margin-bottom: 10px" alt="" />
+        src="{{$listing->image ? asset('storage/' . $listing->image) : asset('/images/no-image.png')}}" style="margin-bottom: 10px" alt="" />
         <br>
    Production Year: {{$listing->production_year}}
     <br>

@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Listing;
+use App\Models\Image;
 use Illuminate\Http\Request;
 use Illuminate\Validation\Rule;
 
@@ -10,9 +11,9 @@ use Illuminate\Validation\Rule;
 class ListingController extends Controller
 {
     public function index()
-    {   
+    {
         $listingCount = Listing::count();
-        return view('listings' , [
+        return view('listings', [
         // 'listings' => Listing::orderBy('views', 'desc')
         'listings' => Listing::latest()
         ->filter(request(['search']))
@@ -48,17 +49,38 @@ class ListingController extends Controller
         ]);
 
 
-        // user_id gets the value from the id of the user logged in 
+        // user_id gets the value from the id of the user logged in
         $formFields['user_id'] = auth()->id();
 
-        if($request->hasFile('images')) {
-            $formFields['images'] = $request->file('images')->store('images', 'public');
-        }
+        $request->validate([
+            'imageFile' => 'required',
+            'imageFile.*' => 'mimes:jpeg,jpg,png,gif,csv,txt,pdf,webp|max:2048'
+          ]);
 
-        Listing::create($formFields);
-
-        return redirect('/listings/manage')->with(['success' => 'Car Listed for Sale!']);
+if ($request->hasfile('imageFile')) {
+    foreach ($request->file('imageFile') as $file) {
+        $name = $file->getClientOriginalName();
+        $file->move(public_path().'/storage/uploads/', $name);
+        $imgData[] = $name;
     }
+
+    $fileModal = new Image();
+    $fileModal->name = json_encode($imgData);
+    $fileModal->image_path = json_encode($imgData);
+
+
+    $fileModal->save();
+}
+
+            if ($request->hasFile('image')) {
+                $formFields['image'] = $request->file('image')->store('images', 'public');
+            }
+
+            Listing::create($formFields);
+
+            return redirect('/listings/manage')->with(['success' => 'Car Listed for Sale!']);
+        }
+    
 
     public function edit(Listing $listing)
     {
@@ -89,7 +111,7 @@ class ListingController extends Controller
         
         $listing->update($formFields);
 
-        return redirect('/listings/manage')->with(['success' => 'Listing Updated!']);
+        return back()->with(['success' => 'Listing Updated!']);
     }
 
     public function destroy(Listing $listing)

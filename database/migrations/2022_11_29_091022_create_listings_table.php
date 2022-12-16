@@ -23,7 +23,7 @@ return new class extends Migration
             $table->string('fuel_type');
             $table->string('transmission');
             $table->string('type');
-            $table->string('images')->nullable();
+            $table->string('image')->nullable();
             $table->string('description');
             $table->integer('price');
             $table->integer('views')->default(0)->nullable();

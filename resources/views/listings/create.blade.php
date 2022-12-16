@@ -123,20 +123,36 @@
 </div>
 
 <div class="mb-6">
-    <label for="images" class="inline-block text-lg mb-2"
-        >Image: </label
+    <label for="image" class="inline-block text-lg mb-2"
+        >Cover Image: </label
     >
     <input
         type="file"
         class="border border-gray-200 rounded p-2 w-full"
-        name="images"
-
-
+        accept="image/*"
+        name="image"
     />
     @error('image')
     <p class="text-red-500 text-xs mt-1">{{$message}}</p>
 @enderror
 </div>
+
+<div class="mb-6">
+    <label for="images" class="inline-block text-lg mb-2"
+        >Images: </label
+    >
+    <input
+        type="file"
+        id="images"
+        class="border border-gray-200 rounded p-2 w-full"
+        accept="image/*"
+        name="imageFile[]" multiple
+    />
+    @error('image')
+    <p class="text-red-500 text-xs mt-1">{{$message}}</p>
+@enderror
+</div>
+
 
 <div class="mb-6">
     <label for="description" class="inline-block text-lg mb-2"
