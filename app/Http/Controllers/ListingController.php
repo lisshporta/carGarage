@@ -105,8 +105,8 @@ if ($request->hasfile('imageFile')) {
             'price' => 'required|max:7',
         ]);
 
-        if($request->hasFile('images')) {
-            $formFields['images'] = $request->file('images')->store('images', 'public');
+        if($request->hasFile('image')) {
+            $formFields['image'] = $request->file('image')->store('images', 'public');
         }
         
         $listing->update($formFields);

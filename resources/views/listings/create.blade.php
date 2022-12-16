@@ -148,7 +148,7 @@
         accept="image/*"
         name="imageFile[]" multiple
     />
-    @error('image')
+    @error('imageFile[]')
     <p class="text-red-500 text-xs mt-1">{{$message}}</p>
 @enderror
 </div>

@@ -127,17 +127,18 @@
     </div>
     
     <div class="mb-6">
-        <label for="images" class="inline-block text-lg mb-2"
-            >Image: </label
+        <label for="image" class="inline-block text-lg mb-2"
+            >Add/Change Cover Image: </label
         >
         <input
             type="file"
             class="border border-gray-200 rounded p-2 w-full"
-            name="images"
+            name="image"
 
         />
-        <img class="width="400" height="80" src="{{ asset('storage/' . $listing->images) }}">
-        @error('images')
+        <img class="width="400" height="80"
+        src="{{$listing->image ? asset('storage/' . $listing->image) : asset('/images/no-image.png')}}" alt="" />
+        @error('image')
         <p class="text-red-500 text-xs mt-1">{{$message}}</p>
     @enderror
     </div>
