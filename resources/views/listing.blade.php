@@ -2,7 +2,7 @@
 <x-layout>
 
 <div class="center">
-    <div style="border:2px solid black;padding:15px;border-radius:10px">
+    <div style="border:2px solid black;padding:15px;border-radius:10px;margin-bottom:7%">
 
       <p>Views: {{$listing->views}} <i class='fa fa-eye'></i></p>
 <h2> 
@@ -32,6 +32,13 @@ Model: {{$listing->model}}
  Price : {{$listing->price}} € 
     <br>
  Seller: {{$listing->user->name}}
+    <br>
+    @if(!$listing->user->phone)
+      Contact Seller: No Phone Number!
+    @else
+Contact Seller: {{$listing->user->phone}}
+@endif
+
 
 </p>
       <div style="display:flex; justify-content:space-between">

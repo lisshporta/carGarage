@@ -10,7 +10,7 @@
     @endif
     
     <table class="center">
-        <tbody style="border:2px solid black;padding:5px;border-radius:10px">
+        <tbody style="border:2px solid black;padding:5px;border-radius:10px;margin-bottom:7%">
             @unless($listings->isEmpty())
             @foreach($listings as $listing)
             <tr>

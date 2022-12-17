@@ -37,7 +37,7 @@
 </div>
 
 @else 
-<p>No Listings Found</p>
+<p style="margin-left:10px">No Listings Found</p>
 @endunless
 </div>
 </div>

@@ -4,7 +4,7 @@
         <x-flash />
     
     <div style="border:2px solid black;padding:15px;border-radius:10px;margin-top:95px;
-                display:grid;width:35%;justify-content:center;margin-left:32%;">
+                display:grid;width:35%;justify-content:center;margin-left:32%;margin-bottom:7%">
     <h2 class="text-2xl font-bold uppercase mb-1">
         Edit Listing : 
     </h2>
@@ -142,6 +142,23 @@
         <p class="text-red-500 text-xs mt-1">{{$message}}</p>
     @enderror
     </div>
+
+    <div class="mb-6">
+        <label for="images" class="inline-block text-lg mb-2"
+            >Images: </label
+        >
+        <input
+            type="file"
+            id="images"
+            class="border border-gray-200 rounded p-2 w-full"
+            accept="image/*"
+            name="imageFile[]" multiple
+        />
+        @error('imageFile[]')
+        <p class="text-red-500 text-xs mt-1">{{$message}}</p>
+    @enderror
+    </div>
+
 
 
     <div class="mb-6">
