@@ -69,6 +69,7 @@ if ($request->hasfile('imageFile')) {
 
 
     $fileModal->save();
+    $formFields['image_id'] = $fileModal->id;
 }
 
             if ($request->hasFile('image')) {
