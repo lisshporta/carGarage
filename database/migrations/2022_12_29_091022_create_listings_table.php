@@ -16,6 +16,7 @@ return new class extends Migration
         Schema::create('listings', function (Blueprint $table) {
             $table->id();
             $table->foreignId('user_id')->constrained()->onDelete('cascade');
+            $table->foreignId('image_id')->nullable()->constrained();
             $table->string('brand');
             $table->string('model');
             $table->integer('production_year');
