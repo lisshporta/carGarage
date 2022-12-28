@@ -4,7 +4,7 @@
         <x-flash />
     
     <div style="border:2px solid black;padding:15px;border-radius:10px;margin-top:95px;
-                display:grid;width:35%;justify-content:center;margin-left:32%;margin-bottom:7%">
+                display:grid;width:35%;justify-content:center;margin-left:32%;margin-bottom:10%">
     <h2 class="text-2xl font-bold uppercase mb-1">
         Edit Listing : 
     </h2>
@@ -13,7 +13,10 @@
     @csrf
     @method('PUT')
     <div  class="mb-6">
-      Brand: <select name="brand" id="brand">
+        <label for="title" class="inline-block text-lg mb-2"
+        >Brand: </label
+    >
+       <select class="p-2 w-full" name="brand" id="brand">
         <option>{{$listing->brand}}</option>
         <option>Audi</option>
         <option>BMW</option>
@@ -183,7 +186,7 @@
         >
         <input
             type="number"
-            class="border border-gray-200 rounded p-2 w-full"
+            class="border border-gray-200 rounded p-2"
             name="price"
             value="{{$listing->price}}"
     
@@ -193,7 +196,7 @@
     @enderror
     </div>
     
-    <button style="margin-top:10px" type="submit"> Update Listing </button>
+    <button class="border-solid border-2 border-black rounded p-1" style="margin-top:10px" type="submit"> Update Listing </button>
     </form>
     
     </div>

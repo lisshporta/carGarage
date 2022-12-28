@@ -3,7 +3,7 @@
 <x-header />
 
 <div style="border:2px solid black;padding:15px;border-radius:10px;margin-top:95px;
-            display:grid;width:35%;justify-content:center;margin-left:32%;">
+            display:grid;width:35%;justify-content:center;margin-left:32%;margin-bottom:10%;">
 <h2 class="text-2xl font-bold uppercase mb-1">
     Sell Your Car
 </h2>
@@ -11,7 +11,10 @@
 <form method="POST" action="/listings" enctype="multipart/form-data">
 @csrf
 <div  class="mb-6">
-  Brand: <select name="brand" id="brand">
+    <label for="title" class="inline-block text-lg mb-2"
+    >Brand: </label
+>
+    <select class="p-2 w-full" name="brand" id="brand">
     <option disabled selected hidden>Choose..</option>
         <option>Audi</option>
         <option>BMW</option>
@@ -177,17 +180,17 @@
     >
     <input
         type="number"
-        class="border border-gray-200 rounded p-2 w-full"
+        class="border border-gray-200 rounded p-2"
         name="price"
         value="{{old('price')}}"
 
-    /> €
+    />€
     @error('price')
     <p class="text-red-500 text-xs mt-1">{{$message}}</p>
 @enderror
 </div>
 
-<button style="margin-top:10px" type="submit"> List for Sale </button>
+<button class="border-solid border-2 border-black rounded p-1" style="margin-top:10px" type="submit"> List for Sale </button>
 </form>
 
 </div>

@@ -17,7 +17,7 @@ class ListingController extends Controller
         // 'listings' => Listing::orderBy('views', 'desc')
         'listings' => Listing::latest()
         ->filter(request(['search']))
-        ->simplePaginate(9)
+        ->paginate(9)
         ])->with('listingCount', $listingCount);
     }
 
