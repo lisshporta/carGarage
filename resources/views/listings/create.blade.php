@@ -1,9 +1,8 @@
-
 <x-layout>
-<x-header />
+    <x-header />
 
 <div style="border:2px solid black;padding:15px;border-radius:10px;margin-top:95px;
-            display:grid;width:35%;justify-content:center;margin-left:32%;margin-bottom:10%;">
+            display:grid;width:35%;margin-left:32%;margin-bottom:10%;">
 <h2 class="text-2xl font-bold uppercase mb-1">
     Sell Your Car
 </h2>
