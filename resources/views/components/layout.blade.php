@@ -16,9 +16,8 @@
    margin: 40px 20px;
    margin-bottom: 5px; 
    height: 100%;
-   
-   
 }  
+
 
 .center {
   display: flex;

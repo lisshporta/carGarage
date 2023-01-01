@@ -9,7 +9,7 @@
             <tr>
                 <td>
                     @if(count($listings) == 1)    
-                    <h2 class="center">Manage your Listing</h2>
+                    <h2 class="text-2xl font-bold uppercase text-center mb-5 mt-1">Manage your Listing</h2>
                     @else
                     <h2 class="text-2xl font-bold uppercase text-center mb-5 mt-1">Manage your Listings</h2>
                     @endif                

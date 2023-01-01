@@ -42,7 +42,7 @@
 </div>
 </div>
 <section style="text-align:left;margin-left:20px;margin-bottom:75px;margin-right:20px">
-    {{$listings->links()}}
+    {{ $listings->appends(['search' => request('search')])->links() }}
 </section>
 
 <x-footer />

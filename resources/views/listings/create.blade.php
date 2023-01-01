@@ -16,6 +16,7 @@
     <select class="p-2 w-full" name="brand" id="brand">
     <option disabled selected hidden>Choose..</option>
         <option>Audi</option>
+        <option>Mazda</option>
         <option>BMW</option>
         <option>Mercedes</option>
         <option>Toyota</option>
