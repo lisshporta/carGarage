@@ -26,7 +26,6 @@ class ListingFactory extends Factory
             'type' => $this->faker->word(),
             'description' => $this->faker->sentence(),
             'price' => $this->faker->randomDigit(),
-            'views' => '0'
         ];
     }
 }
