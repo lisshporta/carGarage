@@ -179,7 +179,8 @@
         >Price: </label
     >
     <input
-        type="number"
+        pattern="[0-9.]+" 
+        type="text"
         class="border border-gray-200 rounded p-2"
         name="price"
         value="{{old('price')}}"
