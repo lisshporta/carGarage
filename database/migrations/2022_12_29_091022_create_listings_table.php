@@ -26,7 +26,7 @@ return new class extends Migration
             $table->string('type');
             $table->string('image')->nullable();
             $table->string('description');
-            $table->decimal('price');
+            $table->string('price');
             $table->integer('views')->default(0)->nullable();
             $table->timestamps();
         });

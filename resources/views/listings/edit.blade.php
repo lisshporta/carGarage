@@ -184,14 +184,18 @@
         <label for="price" class="inline-block text-lg mb-2"
             >Price: </label
         >
-        <input
-            pattern="[0-9.]+" 
-            type="text"
-            class="border border-gray-200 rounded p-2"
-            name="price"
-            value="{{$listing->price}}"
-    
-        /> €
+        <input type="text" value="{{$listing->price}}" name="price" id="price" value="{{ number_format(isset($price) ? $price : 0, 0, '.', ',') }}" onkeyup="formatPrice(this);">
+
+    <script>
+        function formatPrice(element) {
+            if(element.value != ""){
+    element.value = parseInt(element.value.replace(/,/g, '')).toLocaleString();
+}else{
+    element.value = '';
+}
+        }
+    </script>
+    €
         @error('price')
         <p class="text-red-500 text-xs mt-1">{{$message}}</p>
     @enderror
