@@ -11,6 +11,23 @@ class Listing extends Model
 {
     use HasFactory;
 
+    protected $fillable = [
+        'id',
+        'user_id',
+        'imade_id',
+        'brand',
+        'model',
+        'production_year',
+        'mileage',
+        'fuel_type',
+        'transmission',
+        'type',
+        'image',
+        'description',
+        'price',
+        'views',
+    ];
+
     public function image()
     {
         return $this->hasMany(Image::class);
