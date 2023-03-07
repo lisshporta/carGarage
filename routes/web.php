@@ -1,7 +1,7 @@
 <?php
 
-use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\ListingController;
 
 /*
@@ -16,32 +16,36 @@ use App\Http\Controllers\ListingController;
 */
 
 // All Listings
-Route::get('/', [ListingController::class, 'index']);
+Route::get('/', [ListingController::class, 'index'])->name('index');
 
+Route::middleware('auth')->group(function () {
 // Show Create Form
-Route::get('/listings/create', [ListingController::class, 'create'])->middleware('auth');
-
-// Store Listing Data
-Route::post('/listings',[ListingController::class, 'store']);
+Route::get('/listings/create', [ListingController::class, 'create'])->name('create');
 
 // Show Edit Form
-Route::get('/listings/{listing}/edit', [ListingController::class, 'edit'])->middleware('auth');
+Route::get('/listings/{listing}/edit', [ListingController::class, 'edit'])->name('edit');
 
 // Edit Listing
-Route::put('/listings/{listing}', [ListingController::class, 'update'])->middleware('auth');
-
-// Delete Listing
-Route::delete('/listings/{listing}', [ListingController::class, 'destroy']);
+Route::put('/listings/{listing}', [ListingController::class, 'update'])->name('update');
 
 // Manage Listings
-Route::get('/listings/manage' , [ListingController::class, 'manage'])->middleware('auth');
+Route::get('/listings/manage' , [ListingController::class, 'manage'])->name('manage');
 
 // Single Listing
-Route::get('/listings/{listing}',[ListingController::class, 'show'])->middleware('auth');
+Route::get('/listings/{listing}',[ListingController::class, 'show'])->name('show');
 
-Route::get('/dashboard', function () {
-    return view('dashboard');
-})->middleware(['auth', 'verified'])->name('dashboard');
+// Store Listing Data
+Route::post('/listings',[ListingController::class, 'store'])->name('store');
+
+// Delete Listing
+Route::delete('/listings/{listing}', [ListingController::class, 'destroy'])->name('destroy');
+
+// Single Listing
+Route::get('/listings/{listing}',[ListingController::class, 'show'])->name('show');
+
+});
+
+Route::get('/dashboard', [ProfileController::class, 'dashboard'])->middleware(['auth', 'verified'])->name('dashboard');
 
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');

@@ -64,4 +64,9 @@ class ProfileController extends Controller
 
         return Redirect::to('/')->with(['success' => 'Account Deleted!']);
     }
+
+    public function dashboard()
+    {
+        return view('dashboard');
+    }
 }
