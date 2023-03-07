@@ -45,6 +45,9 @@ Route::get('/listings/{listing}',[ListingController::class, 'show'])->name('show
 
 });
 
+// Redirect if not found
+Route::fallback(fn() => redirect('/'));
+
 Route::get('/dashboard', [ProfileController::class, 'dashboard'])->middleware(['auth', 'verified'])->name('dashboard');
 
 Route::middleware('auth')->group(function () {
