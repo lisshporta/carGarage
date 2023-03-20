@@ -7,7 +7,7 @@
     Sell Your Car
 </h2>
 
-<form method="POST" action="/listings" enctype="multipart/form-data">
+<form method="POST" action="/listing" enctype="multipart/form-data">
 @csrf
 <div  class="mb-6">
     <label for="title" class="inline-block text-lg mb-2"
@@ -64,15 +64,15 @@
         >Mileage: </label
     >
     <select name="mileage" id="mileage">
-        <option> 0 - 50.000</option> 
-        <option> 50.000 - 100.000</option> 
-        <option> 100.000 - 150.000</option> 
-        <option> 150.000 - 200.000</option> 
-        <option> 200.000 - 250.000</option> 
-        <option> 250.000 - 300.000</option> 
-        <option> 300.000+ </option> 
+        <option> 0 - 50.000</option>
+        <option> 50.000 - 100.000</option>
+        <option> 100.000 - 150.000</option>
+        <option> 150.000 - 200.000</option>
+        <option> 200.000 - 250.000</option>
+        <option> 250.000 - 300.000</option>
+        <option> 300.000+ </option>
     </select>
-    
+
     @error('mileage')
     <p class="text-red-500 text-xs mt-1">{{$message}}</p>
 @enderror
@@ -161,11 +161,11 @@
     <label for="description" class="inline-block text-lg mb-2"
         >Description: </label
     >
-    <textarea style="margin-top:10px" 
-            name="description" 
-            id="description" 
-            cols="15" 
-            rows="7" 
+    <textarea style="margin-top:10px"
+            name="description"
+            id="description"
+            cols="15"
+            rows="7"
             placeholder="-Describe ur car with a few sentences "
         ></textarea>
 

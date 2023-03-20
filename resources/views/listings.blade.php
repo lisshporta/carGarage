@@ -3,21 +3,21 @@
 
     <x-flash />
     <div style="display:flex;justify-content:space-between">
-<x-search /> 
+<x-search />
 @auth
 <p>Welcome back <a style="color: black ; text-decoration:none;" href="/profile">{{auth()->user()->name}}</a> </p>
 @endauth
 <p style="margin-right:10px">Total number of listings: {{$listingCount}}</p>
     </div>
-   
 
-@unless(count($listings) == 0)    
+
+@unless(count($listings) == 0)
 <div class="emri">
 @foreach($listings as $listing)
 <div style="border:2px solid black;padding:15px;border-radius: 10px;margin-bottom:20px ">
 
 <h2>
-   <a class="font-medium text-2xl" style="color: black ; text-decoration:none" href="/listings/{{$listing->id}}">{{$listing->brand}} , {{$listing->model}}</a>
+   <a class="font-medium text-2xl" style="color: black ; text-decoration:none" href="/listing/{{$listing->id}}">{{$listing->brand}} , {{$listing->model}}</a>
 </h2>
 
 <p>
@@ -36,7 +36,7 @@
 
 </div>
 
-@else 
+@else
 <p style="margin-left:10px">No Listings Found</p>
 @endunless
 </div>
