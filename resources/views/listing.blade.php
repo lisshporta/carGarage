@@ -1,6 +1,5 @@
 <x-header />
 <x-layout>
-
 <div class="center">
     <div style="border:2px solid black;padding:15px;border-radius:10px;margin-bottom:7%">
 
@@ -30,9 +29,11 @@
    @endif
 </div>
 
-<div class="text-right">
-      <a style="color: black ; text-decoration:none" href="/"><button> <i class="fa fa-chevron-left"></i> Back To Homepage!</button></a>
+      <x-share-button />
+      <a class="" style="color: black ; text-decoration:none" href="/"> <i class="fa fa-chevron-left"></i> Back To Homepage!</a>
 
+</div>
+</div>
 </div>
 
 <x-footer />
