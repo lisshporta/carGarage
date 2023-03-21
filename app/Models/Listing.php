@@ -41,8 +41,11 @@ class Listing extends Model
     public function scopeFilter($query, array $filters)
     {
         if($filters['search'] ?? false) {
-            $query->where('brand' , 'like' , '%' . request('search') . '%')
-            ->orWhere('model' , 'like' , '%' . request('search') . '%');
+            $query->where('brand', 'like', '%' . request('search') . '%')
+                ->orWhere('model', 'like', '%' . request('search') . '%')
+                ->orWhereHas('user', function ($query) use ($filters) {
+                    $query->where('name', 'like', '%' . $filters['search'] . '%');
+                });
         }
     }
 }
