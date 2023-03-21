@@ -28,8 +28,9 @@
    <p>Contact Seller: {{ $listing->user->phone }}</p>
    @endif
 </div>
-
+<br>
       <x-share-button />
+      <div class="flash"></div>
       <a class="" style="color: black ; text-decoration:none" href="/"> <i class="fa fa-chevron-left"></i> Back To Homepage!</a>
 
 </div>
