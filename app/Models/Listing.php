@@ -44,6 +44,7 @@ class Listing extends Model
         if($filters['search'] ?? false) {
             $query->where('brand', 'like', '%' . request('search') . '%')
                 ->orWhere('model', 'like', '%' . request('search') . '%')
+                ->orWhere('color', 'like', '%' . request('search') . '%')
                 ->orWhereHas('user', function ($query) use ($filters) {
                     $query->where('name', 'like', '%' . $filters['search'] . '%');
                 });
