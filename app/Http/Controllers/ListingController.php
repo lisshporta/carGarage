@@ -23,10 +23,19 @@ class ListingController extends Controller
     public function show(Listing $listing)
     {
         Listing::find($listing->id)->increment('views');
+
+        $similarListings = Listing::where('brand', $listing->brand)
+        ->where('id', '<>', $listing->id)
+        ->inRandomOrder()
+        ->limit(3)
+        ->get();
+
         return view('listing', [
-        'listing' => $listing
+            'listing' => $listing,
+            'similarListings' => $similarListings,
         ]);
     }
+
 
     public function create()
     {
