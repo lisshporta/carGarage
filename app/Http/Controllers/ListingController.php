@@ -21,20 +21,28 @@ class ListingController extends Controller
     }
 
     public function show(Listing $listing)
-    {
-        Listing::find($listing->id)->increment('views');
+{
+    Listing::find($listing->id)->increment('views');
 
-        $similarListings = Listing::where('brand', $listing->brand)
+    $similarListings = Listing::where('brand', $listing->brand)
         ->where('id', '<>', $listing->id)
         ->inRandomOrder()
         ->limit(3)
         ->get();
 
-        return view('listing', [
-            'listing' => $listing,
-            'similarListings' => $similarListings,
-        ]);
-    }
+    $sellerListings = Listing::where('user_id', $listing->user_id)
+        ->where('id', '<>', $listing->id)
+        ->inRandomOrder()
+        ->limit(3)
+        ->get();
+
+    return view('listing', [
+        'listing' => $listing,
+        'similarListings' => $similarListings,
+        'sellerListings' => $sellerListings,
+    ]);
+}
+
 
 
     public function create()
