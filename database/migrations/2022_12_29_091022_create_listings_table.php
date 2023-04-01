@@ -19,6 +19,7 @@ return new class extends Migration
             $table->foreignId('image_id')->nullable()->constrained();
             $table->string('brand');
             $table->string('model');
+            $table->string('color');
             $table->integer('production_year');
             $table->string('mileage');
             $table->string('fuel_type');

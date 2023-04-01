@@ -17,6 +17,7 @@ class Listing extends Model
         'imade_id',
         'brand',
         'model',
+        'color',
         'production_year',
         'mileage',
         'fuel_type',

@@ -45,6 +45,25 @@
 
     <div class="mb-6">
         <label for="title" class="inline-block text-lg mb-2"
+            >Color: </label
+        >
+        <select class="p-2 w-full" name="color" id="color">
+            <option>{{$listing->color}}</option>
+                <option>Red</option>
+                <option>White</option>
+                <option>Blue</option>
+                <option>Black</option>
+                <option>Gray</option>
+                <option>Silver</option>
+                <option>Orange</option>
+           </select>
+        @error('color')
+        <p class="text-red-500 text-xs mt-1">{{$message}}</p>
+    @enderror
+    </div>
+
+    <div class="mb-6">
+        <label for="title" class="inline-block text-lg mb-2"
             >Production Year: </label
         >
         <input

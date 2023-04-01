@@ -38,6 +38,7 @@ class ListingController extends Controller
         $formFields = $request->validate([
             'brand' => 'required',
             'model' => 'required',
+            'color' => 'required',
             'production_year' => 'required|max:4|min:4',
             'mileage' => 'required',
             'fuel_type' => 'required',
@@ -95,6 +96,7 @@ class ListingController extends Controller
         $formFields = $request->validate([
             'brand' => 'required',
             'model' => 'required',
+            'color' => 'required',
             'production_year' => 'required|max:4|min:4',
             'mileage' => 'required',
             'fuel_type' => 'required',

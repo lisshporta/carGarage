@@ -14,6 +14,7 @@
    <div class="">
    <p>Brand: {{ $listing->brand }}</p>
    <p>Model: {{ $listing->model }}</p>
+   <p>Color: {{ $listing->color }}</p>
    <p>Produciton Year: {{ $listing->production_year }}</p>
    <p>Mileage: {{ $listing->mileage }} km</p>
    <p>Fuel Type: {{ $listing->fuel_type }}</p>
@@ -31,6 +32,7 @@
 <br>
       <x-share-button />
       <div class="flash"></div>
+      {{-- <div class="flash fixed bottom-0 right-0 m-8 p-4 bg-white border border-gray-200 rounded-md shadow-md text-gray-700 mb-20"></div> --}}
       <a class="" style="color: black ; text-decoration:none" href="/"> <i class="fa fa-chevron-left"></i> Back To Homepage!</a>
 
 </div>
