@@ -9,7 +9,12 @@ class UsersController extends Controller
 {
     public function manage()
     {
-        return view('users.manage' , ['users' => request()->user()->get()]);
+        if (auth()->user()->is_admin) {
+            return view('users.manage', ['users' => request()->user()->get()]);
+        }
+        else {
+            return redirect('/')->with(['success' => 'You do not have permission to perform this action.']);
+        }
     }
 
     public function destroy(User $user)
