@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\ListingController;
+use App\Http\Controllers\UsersController;
 
 /*
 |--------------------------------------------------------------------------
@@ -42,6 +43,12 @@ Route::delete('/listing/{listing}', [ListingController::class, 'destroy'])->name
 
 // Single Listing
 Route::get('/listing/{listing}',[ListingController::class, 'show'])->name('show');
+
+// Manage Users
+Route::get('/users', [UsersController::class, 'manage']);
+
+// Delete User
+Route::delete('/users/{user}', [UsersController::class, 'destroy']);
 
 });
 
