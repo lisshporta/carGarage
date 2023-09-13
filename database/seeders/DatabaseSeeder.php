@@ -20,6 +20,7 @@ class DatabaseSeeder extends Seeder
             'name' => 'User',
             'email' => 'user@excample.com',
             'password' => bcrypt('1'),
+            'is_admin' => true,
         ]);
 
         Listing::factory(34)->create([
