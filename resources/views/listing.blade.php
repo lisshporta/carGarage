@@ -1,5 +1,6 @@
 <x-header />
 <x-layout>
+  <x-flash />
    <x-listing-card :listing="$listing" />
    @if($similarListings->count() > 0)
    <h2 class="mt-8 ml-5 font-bold text-3xl">Similar Vehicles</h2>

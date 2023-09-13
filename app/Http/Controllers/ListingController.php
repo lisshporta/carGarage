@@ -93,9 +93,9 @@ class ListingController extends Controller
                 $formFields['image'] = $request->file('image')->store('images', 'public');
             }
 
-            Listing::create($formFields);
+            $listing = Listing::create($formFields);
 
-            return redirect('/manage')->with(['success' => 'Car Listed for Sale!']);
+            return redirect('/listing/' . $listing->id)->with(['success' => 'Car Listed for Sale!']);
         }
 
 
