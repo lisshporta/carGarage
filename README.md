@@ -39,7 +39,7 @@ php artisan migrate
 ```
 - ↑ type yes to create db
 ```bash
-php artisan migrate:fresh --seed
+php artisan db:seed
 ```
 - ↑ this will seed the db
 
