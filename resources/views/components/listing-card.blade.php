@@ -21,11 +21,8 @@
    <p>Description: {{ $listing->description }}</p>
    <p>Price : {{ $listing->price }} €</p>
    <p>Seller: {{ $listing->user->name }}</p>
-      @if(!$listing->user->phone)
-         <p>Contact Seller: No Phone Number!</p>
-      @else
-   <p>Contact Seller: {{ $listing->user->phone }}</p>
-   @endif
+   <p>Contact Seller: {{$listing->user->phone ? $listing->user->phone : 'No Phone Number!'}}</p>
+   <p class="text-slate-400">Listed {{$listing->created_at->diffForHumans()}}</p>
 </div>
 <br>
       <x-share-button />

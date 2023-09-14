@@ -27,6 +27,8 @@
   <p class="font-medium text-l"> Production Year: {{$listing->production_year}} </p>
 
   <p class="font-medium text-l">  Mileage: {{$listing->mileage}} km </p>
+  <p class="text-slate-400">Listed {{$listing->created_at->diffForHumans()}}</p>
+
 
 </p>
 
