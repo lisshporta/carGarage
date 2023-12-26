@@ -21,7 +21,7 @@
    <p>Description: {{ $listing->description }}</p>
    <p>Price : {{ $listing->price }} €</p>
    <p>Seller: {{ $listing->user->name }}</p>
-   <p>Contact Seller: {{$listing->user->phone ? $listing->user->phone : 'No Phone Number!'}}</p>
+   <p>Contact Seller: {{$listing->user->phone ?: 'No Phone Number!'}}</p>
    <p class="text-slate-400">Listed {{$listing->created_at->diffForHumans()}}</p>
 </div>
 <br>
